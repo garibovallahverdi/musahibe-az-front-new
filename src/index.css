@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mod Renkleri */
+    --background: 255 255 255; /* Beyaz */
+    --backgroundSecond:245 250 255;
+    --foreground: 0 0 0; /* Siyah */ 
+    --primary: 59 130 246; /* Mavi */
+    --secondary: 240 240 240; /* Açık Gri */
+    --accent: 220 38 38; /* Kırmızı */
+    --border: 200 200 200; /* Sınır */
+    --button-bg: var(--primary); /* Buton Arkaplan */
+    --button-text: 255 255 255; /* Buton Yazısı */
+    --card-bg: var(--secondary); /* Kart Arkaplan */
+    --card-text: var(--foreground); /* Kart Yazısı */
+  }
+
+  .dark {
+    /* Dark Mod Renkleri */
+    --background: 17 24 39; /* Koyu Gri */
+    --backgroundSecond:0 20 46;
+    --foreground: 255 255 255; /* Beyaz */
+    --primary: 34 197 94; /* Yeşil */
+    --secondary: 55 65 81; /* Daha Koyu Gri */
+    --accent: 255 69 58; /* Kırmızı */
+    --border: 75 85 99; /* Koyu Sınır */
+    --button-bg: var(--primary); /* Buton Arkaplan */
+    --button-text: 255 255 255; /* Buton Yazısı */
+    --card-bg: var(--secondary); /* Kart Arkaplan */
+    --card-text: var(--foreground); /* Kart Yazısı */
+  }
+
+  html {
+    transition: all 0.3s ease-in-out;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors poppins-light;
+  }
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: translateY(15px);
+
+
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(5px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+.card-animate {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+
+/* NewsDetailPage.css */
+.news-detail-content {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.news-detail-content img {
+  max-width: 100%; 
+  height: auto;
+  width: 100%;
+  border-radius: 8px; 
+  margin: 20px 0; 
+}
+
+.news-detail-content h1, .news-detail-content h2, .news-detail-content h3 {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.news-detail-content p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.news-detail-content ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.news-detail-content ul li {
+  margin-bottom: 8px;
+}
+
+.news-detail-content blockquote {
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.news-detail-content a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.news-detail-content a:hover {
+  text-decoration: underline;
+}
+
+.news-detail-content pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.news-detail-content code {
+  background-color: #f9f9f9;
+  padding: 2px 4px;
+  font-family: monospace;
+}
+
+
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(
+    -90deg,
+    #e0e0e0 0%,
+    #f2f2f2 50%,
+    #e0e0e0 100%
+  );
+  background-size: 400% 400%;
+  animation: skeleton-loading 1.5s ease infinite;
+}
+
+/* Animasyon */
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Gerçek tag linkleri */
+.tag-link {
+  color: #333;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.tag-link:hover {
+  background-color: #e0e0e0;
+}
